@@ -1,0 +1,30 @@
+{
+  "name": "kiwi-landing-page",
+  "version": "0.5.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "postcss css/styles.css -o _site/css/styles.css && eleventy --serve --watch & postcss css/styles.css -o _site/css/styles.css --watch",
+    "build": "NODE_ENV=production eleventy && postcss css/styles.css -o _site/css/styles.css",
+    "debug": "DEBUG=* eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alpinejs": "^3.14.3",
+    "csv-parse": "^5.6.0",
+    "luxon": "^3.5.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "autoprefixer": "^10.4.20",
+    "clean-css": "^5.3.3",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.15",
+    "terser": "^5.36.0"
+  }
+}
