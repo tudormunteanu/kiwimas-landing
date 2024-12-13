@@ -1591,6 +1591,11 @@ punycode.js@^2.3.1:
   resolved "https://registry.npmjs.org/punycode.js/-/punycode.js-2.3.1.tgz"
   integrity sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==
 
+pure-snow.js@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/pure-snow.js/-/pure-snow.js-2.1.0.tgz"
+  integrity sha512-+nucAfvxnOp+p2VdQRYJkATcz/d/f7txgxzU0ybb1po5XzLzQpwxOiz6PfdzwQCPLOMBOQ8Lx1OZVon8xB8vaQ==
+
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"

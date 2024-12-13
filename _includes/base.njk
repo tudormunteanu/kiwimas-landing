@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+    <script defer src="{{ '/js/pure-snow.js' | url }}"></script>
 </head>
 <body class="bg-gray-50">
+    <div id="snow" data-count="200"></div>
     {{ content | safe }}
 </body>
 </html>

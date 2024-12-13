@@ -5,6 +5,13 @@
 /* Custom styles */
 body {
     @apply bg-gray-100;
+    background: radial-gradient(ellipse at bottom, #fdfdfd 0%, #afd8f9 100%);
+    overflow-x: hidden;
+    min-height: 100vh; 
+    /* If you want to change the site height you can remove overflow-y */
+    /* pure-snow will automatically detect height of body tag */
+    overflow-y: hidden;
+    /* color: white;     */
 }
 
 .container {
@@ -55,3 +62,51 @@ h1, h2 {
   animation: shake 0.5s ease-in-out;
 }
 
+
+/* Snow */
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px grey);
+}
+
+/* Maria Fly */
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+.maria-fly {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  width: 674px;
+  height: 500px;
+  object-fit: cover;
+  display: none;
+  z-index: 50;
+}
+
+.maria-fly.animate {
+  display: block;
+  animation: flyAcross 4s ease-in-out forwards;
+}

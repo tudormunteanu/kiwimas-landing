@@ -1,12 +1,23 @@
 ---
 layout: base.njk
 ---
-<div x-data="" class="container mx-auto px-4 py-8">
+<div x-data="{ showMaria: false }" class="container mx-auto px-4 py-8">
     <header class="text-center mb-12">
         <div class="mb-4 py-10">
-            <!-- Kiwi Logo with Santa Hat -->
-            <img src="{{ '/media/Kiwimas_Icon.webp' | url }}" alt="Kiwimas Logo" class="w-48 h-48 mx-auto shake-on-hover">
+            <img 
+                src="{{ '/media/Kiwimas_Icon.webp' | url }}" 
+                alt="Kiwimas Logo" 
+                class="w-48 h-48 mx-auto shake-on-hover"
+                @mouseenter="showMaria = true"
+                @mouseleave="setTimeout(() => showMaria = false, 4000)"
+            >
         </div>
+        <img 
+            src="{{ '/media/mariah-kiwi.jpg' | url }}" 
+            alt="Maria Kiwi" 
+            class="maria-fly"
+            :class="{ 'animate': showMaria }"
+        >
         <h1 class="text-6xl font-bold mb-4">$KIWIMAS</h1>
     </header>
 
@@ -44,4 +55,9 @@ layout: base.njk
             Once we reach 120k marketcap, $KIWIMAS will graduate from WOW and become a pair on Uniswap.
         </p>
     </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 pt-8 border-t border-gray-300 text-center text-sm text-gray-600">
+        <p>Read the most in-depth web3 news at <a href="https://news.kiwistand.com" class="underline hover:text-gray-800" target="_blank" rel="noopener noreferrer">news.kiwistand.com</a></p>
+    </footer>
 </div>
