@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwimas Frame</title>
+    
+    <!-- Farcaster Frame Meta Tags -->
+    <meta property="fc:frame" content="vNext">
+    <meta property="fc:frame:image" content="{{ image | url }}">
+    {% if button1_text %}
+    <meta property="fc:frame:button:1" content="{{ button1_text }}">
+    {% endif %}
+    {% if button2_text %}
+    <meta property="fc:frame:button:2" content="{{ button2_text }}">
+    {% endif %}
+    {% if button3_text %}
+    <meta property="fc:frame:button:3" content="{{ button3_text }}">
+    {% endif %}
+    {% if post_url %}
+    <meta property="fc:frame:post_url" content="{{ post_url }}">
+    {% endif %}
+</head>
+<body>
+    {{ content | safe }}
+</body>
+</html> 
